@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Cerita Lebaran</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom right, #ffa7e9, #ffd6f5);
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: rgb(211, 109, 163);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 30px;
+        }
+
+        .logo {
+            font-family: 'Baskerville', serif;
+            font-size: 24px;
+            color: white;
+        }
+
+        .menu {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu li a {
+            text-decoration: none;
+            font-family: 'Baskerville', serif;
+            font-size: 18px;
+            color: white;
+            cursor: pointer;
+        }
+
+        .menu li a:hover {
+            color: gold;
+        }
+
+        section {
+            display: none;
+            padding: 60px 20px;
+            animation: fadeInPage 1s ease-in-out;
+        }
+
+        section.active {
+            display: block;
+        }
+
+        @keyframes fadeInPage {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        section.active {
+            display: block;
+        }
+
+        section.active {
+            display: block;
+        }
+
+        /* Home */
+        .home {
+            text-align: center;
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .ornament {
+            font-size: 80px;
+            margin-bottom: 20px;
+            padding: 20px 30px;
+            border: 3px solid gold;
+            border-radius: 20px;
+            background: white;
+            box-shadow: 0 6px 15px rgba(255, 251, 251, 0.2);
+            display: inline-block;
+        }
+
+        .home h1 {
+            font-family: 'Brush Script MT', cursive;
+            font-size: 40px;
+            color: rgb(193, 5, 105);
+            text-shadow: 
+            1px 1px 0 #ffffff,
+            2px 2px 0 #dcdcdc,
+            3px 3px 0 #bfbfbf,
+            4px 4px 0 #a6a6a6,
+            5px 5px 5px rgba(0, 0, 0, 0.35);
+            animation: fadeIn 2s ease-in-out, shadowMove 3s infinite alternate;
+        }
+
+        .home-photo {
+            width: 180px;
+            height: 260px;
+            object-fit: cover;
+            border-radius: 50% / 60%;
+            border: 4px solid white;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+            margin-top: 20px;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes shadowMove {
+            0% {
+                text-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+            }
+            50% {
+                text-shadow: 4px 4px 10px rgba(0,0,0,0.3);
+            }
+            100% {
+                text-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+            }
+        }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        
+
+        /* Cerita */
+        .cerita-box {
+            border: 5px solid black;
+            padding: 30px;
+            max-width: 700px;
+            margin: auto;
+            text-align: center;
+            font-family: 'Baskerville', serif;
+        }
+
+        /* Galeri */
+        .galeri {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            text-align: center;
+        }
+
+        .galeri div {
+            width: 250px;
+        }
+
+        .galeri img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border: 2px solid black;
+        }
+
+        /* Profile */
+        .profile-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .profile-container img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 4px solid black;
+            object-fit: cover;
+        }
+
+        .profile-data {
+            font-family: 'Baskerville', serif;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">Cerita Lebaran Rani Anjela</div>
+        <ul class="menu">
+            <li><a onclick="showSection('home')">Home</a></li>
+            <li><a onclick="showSection('cerita')">Cerita</a></li>
+            <li><a onclick="showSection('galery')">Galery</a></li>
+            <li><a onclick="showSection('profile')">Profile</a></li>
+        </ul>
+    </nav>
+
+    <!-- Home -->
+    <section id="home" class="home active">
+        <div class="ornament">🌙✨🕌</div>
+        <h1>Selamat Datang di Website Cerita Lebaran Rani Anjela</h1>
+        <img src="foto/foto_saya.jpeg" class="home-photo">
+    </section>
+
+    <!-- Cerita -->
+    <section id="cerita">
+        <div class="cerita-box">
+            Hari Lebaran selalu menjadi momen yang paling dinantikan. Pagi hari dimulai dengan suara takbir yang menggema, membawa suasana haru dan penuh kebahagiaan. Setelah melaksanakan shalat Id bersama keluarga, kami saling bersalaman dan memohon maaf atas segala kesalahan.
+            <br><br>
+            Tradisi berkumpul bersama keluarga besar dan mengunjungi sanak saudara menjadi bagian yang tak terpisahkan. Dengan adanya kunjungan dapat meningkatkan silaturahmi sesama. Tawa, cerita, dan hidangan khas Lebaran seperti ketupat dan rendang menambah kehangatan suasana. Setiap sudut rumah dipenuhi kebersamaan yang begitu berarti.
+            <br><br>
+            Lebaran bukan hanya tentang perayaan, tetapi juga tentang mempererat silaturahmi dan membuka lembaran baru dengan hati yang bersih. Momen ini selalu menjadi kenangan indah yang akan terus diingat sepanjang waktu.
+        </div>
+    </section>
+
+    <!-- Galeri -->
+    <section id="galery">
+        <div class="galeri">
+            <div>
+                <img src="foto/keluarga.jpg">
+                <p>Momen Bersama Keluarga
+                  <br><br>
+                  Berkumpul bersama keluarga adalah momen yang sangat menyenangkan dimana semua keluarga d berkumpul di rumah nenek untuk untuk saling bersilaturahmi.
+                </p>
+            </div>
+            <div>
+                <img src="foto/kerabat.jpg">
+                <p>Silaturahmi
+                  <br><br>
+                  Kami sekeluarga berkunjung kerumah sanak saudara baik itu yang dekat maupun yang jauh untuk mempererat silaturahmi.
+                </p>
+            </div>
+            <div>
+                <img src="foto/makanan.jpg">
+                <p>Hidangan Lebaran
+                  <br><br>
+                  Hidangan saat lebaran adalah hal yang penting, seluruh keluarga makan bersama menyantap hidangan yang disediakan di rumah nenek.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Profile -->
+    <section id="profile">
+        <div class="profile-container">
+            <img src="foto/foto_saya.jpeg">
+            <div class="profile-data">
+                <p>👤 Nama: Rani Anjela</p>
+                <p>🎂 TTL: Aceh, 11 Januari 2004</p>
+                <p>📍 Alamat: Aceh Selatan</p>
+                <p>📸 IG: @rani_anjla</p>
+                <p>📱 WA: 082321633294</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function showSection(id) {
+            // sembunyikan semua section
+            document.querySelectorAll('section').forEach(sec => {
+                sec.style.display = 'none';
+            });
+
+            // tampilkan hanya yang dipilih
+            document.getElementById(id).style.display = 'block';
+        }
+
+        
+    </script>
+
+</body>
+</html>
